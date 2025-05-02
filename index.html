@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashoke Salon - Premium Beauty Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e') center/cover no-repeat;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-pink-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <span class="text-2xl font-semibold">Ashoke Salon</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-pink-200 transition">Home</a>
+                    <a href="#services" class="hover:text-pink-200 transition">Services</a>
+                    <a href="#about" class="hover:text-pink-200 transition">About</a>
+                    <a href="#testimonials" class="hover:text-pink-200 transition">Testimonials</a>
+                    <a href="#contact" class="hover:text-pink-200 transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 hover:bg-pink-600 px-4 rounded transition">Home</a>
+                <a href="#services" class="block py-2 hover:bg-pink-600 px-4 rounded transition">Services</a>
+                <a href="#about" class="block py-2 hover:bg-pink-600 px-4 rounded transition">About</a>
+                <a href="#testimonials" class="block py-2 hover:bg-pink-600 px-4 rounded transition">Testimonials</a>
+                <a href="#contact" class="block py-2 hover:bg-pink-600 px-4 rounded transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Experience Luxury Beauty Care</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">At Ashoke Salon, we blend expertise with premium products to bring out your natural beauty.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Book Now</a>
+                <a href="#services" class="bg-white hover:bg-gray-100 text-pink-700 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">Our Premium Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-pink-600 h-48 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Hair Styling</h3>
+                        <p class="text-gray-600 mb-4">Professional haircuts, coloring, and styling tailored to your unique look and personality.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Precision Haircuts</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Coloring & Highlights</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Keratin Treatments</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-pink-600 h-48 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Skin Care</h3>
+                        <p class="text-gray-600 mb-4">Rejuvenating facials and treatments to nourish your skin and enhance your natural glow.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Anti-Aging Facials</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Deep Cleansing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Hydration Treatments</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-pink-600 h-48 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Nail Care</h3>
+                        <p class="text-gray-600 mb-4">Luxurious manicures and pedicures using premium products for healthy, beautiful nails.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Gel Manicures</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Spa Pedicures</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Nail Art</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-pink-600 h-48 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Bridal Packages</h3>
+                        <p class="text-gray-600 mb-4">Complete bridal beauty solutions to make your special day perfect in every way.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Makeup</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Hairstyling</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Mehendi</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-pink-600 h-48 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Men's Grooming</h3>
+                        <p class="text-gray-600 mb-4">Specialized services designed for modern men who appreciate quality grooming.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Beard Trimming</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Haircuts</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Facial Treatments</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-pink-600 h-48 flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Waxing</h3>
+                        <p class="text-gray-600 mb-4">Professional waxing services for smooth, hair-free skin with minimal discomfort.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Full Body Waxing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Facial Waxing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-pink-500 mr-2"></i> Specialized Techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Ashoke Salon</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2010, Ashoke Salon has been a beacon of beauty and relaxation in our community. Our founder, Mrs. Ashoke Perera, envisioned a space where clients could experience luxury treatments at affordable prices.</p>
+                    <p class="text-gray-600 mb-4">Our team consists of highly trained professionals who regularly update their skills with the latest techniques and trends in the beauty industry.</p>
+                    <p class="text-gray-600 mb-6">We pride ourselves on using only premium, cruelty-free products that deliver exceptional results while being gentle on your skin and hair.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-pink-600 text-white px-4 py-2 rounded-full">
+                            <span class="font-semibold">10+</span> Years Experience
+                        </div>
+                        <div class="bg-pink-600 text-white px-4 py-2 rounded-full">
+                            <span class="font-semibold">50+</span> Happy Clients Daily
+                        </div>
+                        <div class="bg-pink-600 text-white px-4 py-2 rounded-full">
+                            <span class="font-semibold">100%</span> Satisfaction
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Why Choose Us?</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-star text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Expert Stylists</h4>
+                                <p class="text-gray-600">Our team undergoes rigorous training and stays updated with the latest trends.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-leaf text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Premium Products</h4>
+                                <p class="text-gray-600">We use only top-quality, cruelty-free products that deliver exceptional results.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-heart text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Personalized Care</h4>
+                                <p class="text-gray-600">Every service is tailored to your unique needs and preferences.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-shield-alt text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 mb-1">Hygiene First</h4>
+                                <p class="text-gray-600">We maintain the highest standards of cleanliness and sanitation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">What Our Clients Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-md border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">S</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Samanthi Fernando</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"I've been coming to Ashoke Salon for 5 years now and I wouldn't trust anyone else with my hair. The stylists are true artists who understand exactly what I want."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-md border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">P</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Priyanka Rathnayake</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The bridal package was worth every penny! I looked absolutely stunning on my wedding day thanks to the talented team at Ashoke Salon."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-md border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold">N</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Nimal Perera</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"As a man, I was hesitant about going to a salon, but the men's grooming services here are exceptional. My beard has never looked better!"</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Our Happy Clients</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="bg-gray-200 px-6 py-3 rounded-full">Colombo Elite</div>
+                    <div class="bg-gray-200 px-6 py-3 rounded-full">Lankan Brides</div>
+                    <div class="bg-gray-200 px-6 py-3 rounded-full">Corporate Clients</div>
+                    <div class="bg-gray-200 px-6 py-3 rounded-full">Celebrities</div>
+                    <div class="bg-gray-200 px-6 py-3 rounded-full">International Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-pink-700 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Book Your Appointment</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-pink-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Location</h4>
+                                <p>123 Beauty Street, Colombo 05, Sri Lanka</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Phone</h4>
+                                <p>+94 11 234 5678</p>
+                                <p>+94 77 890 1234</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Email</h4>
+                                <p>info@ashokesalon.lk</p>
+                                <p>bookings@ashokesalon.lk</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-600 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">Working Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
+                                <p>Saturday: 9:00 AM - 5:00 PM</p>
+                                <p>Sunday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-2xl font-semibold mb-6">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-pink-600 hover:bg-pink-800 w-12 h-12 rounded-full flex items-center justify-center text-xl transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 hover:bg-pink-800 w-12 h-12 rounded-full flex items-center justify-center text-xl transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 hover:bg-pink-800 w-12 h-12 rounded-full flex items-center justify-center text-xl transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 hover:bg-pink-800 w-12 h-12 rounded-full flex items-center justify-center text-xl transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6">Send Us a Message</h3>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block mb-2 font-medium">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="service" class="block mb-2 font-medium">Service Interested In</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                <option value="">Select a service</option>
+                                <option value="hair">Hair Styling</option>
+                                <option value="skin">Skin Care</option>
+                                <option value="nails">Nail Care</option>
+                                
